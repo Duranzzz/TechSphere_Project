@@ -15,3 +15,5 @@ frontend/dist/
 .env
 *.log
 
+# Clave de Mysql
+backend/config_local.py
