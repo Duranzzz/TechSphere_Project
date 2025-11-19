@@ -15,6 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Variable de entorno que importa la contraseña de Mysql
+from .config_local import MYSQL_PASSWORD
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -81,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techsphere',
         'USER': 'root',
-        'PASSWORD': 'MarceloMysql12345',
+        'PASSWORD': MYSQL_PASSWORD,
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
